@@ -1,0 +1,30 @@
+<a href="/">
+<p>HOME</p>
+</a>
+<h1> Title : <%= @post.title %> </h1>
+
+<p>Paragraph:<br><br>
+  <%= @post.body %> </p>
+
+<p>Tag:<br>
+  <%= @tag.name1 %> <br>
+  <%= @tag.name2 %> <br>
+  <%= @tag.name3 %> <br>
+
+
+
+    <form action="/posts/<%= @post.id %>" method="POST">
+      <input type="hidden" name="_method" value="DELETE">
+      <input type="submit" value="Delete">
+    </form>
+
+
+
+
+  <form action="/posts/<%= @post.id %>/edit" method="POST">
+      <input type="hidden" name="_method" value="GET">
+      <input type="submit" value="Edit">
+    </form>
+
+<a href="/posts/new">Create a new post</a>
+

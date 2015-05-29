@@ -1,0 +1,11 @@
+ <a href="/">
+ <p>HOME</p>
+ </a>
+ <h1>Here is your all Blog Post ~~</h1>
+
+ <% @post.each do |p| %>
+   <a href="/posts/<%= p.id %>">
+     <p><%= p.title %></p>
+   </a>
+ <% end %>
+
